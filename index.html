@@ -11,52 +11,28 @@
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
-  <title>gregslist</title>
+  <title>Sophie's List</title>
 </head>
 
 <body>
   <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select d-flex justify-content-between">
-      <a class="navbar-brand ms-3" href="#">
-        <img src="https://codeworks.blob.core.windows.net/public/assets/img/cw-mark.png" height="45" alt=""
-          loading="lazy">
-        <span class="ms-2">gregslist</span>
-      </a>
-      <b onclick="app.carsController.viewCars()">Cars</b>
-      <b onclick="app.housesController.viewHouses()">Houses</b>
-      <b>Jobs</b>
+    <nav class="navbar navbar-dark navbar-expand bg-dark text-light no-select d-flex justify-content-between px-2">
+      <div>
+        <a class="navbar-brand" href="#">
+          <i class="mdi mdi-cat"></i>
+          <span>Sophie's List</span>
+        </a>
+        <b onclick="app.carsController.viewCars()">Cars</b>
+        <b onclick="app.housesController.viewHouses()">Houses</b>
+        <b onclick="app.jobsController.view()">Jobs</b>
+      </div>
+      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#form-modal">Add Listing</button>
     </nav>
   </header>
+
   <main>
     <div class="container-fluid">
-      <div id="listings" class="row">
-        <!-- Car -->
-        <!-- <div class=" col-6 col-md-3 ">
-          <div class="card">
-            <img src="${this.imgUrl}" alt="" class="card-img">
-            <div class="card-body">
-              <h5 class="card-title">${this.streetAddr}</h5>
-              <h6 class="card-subtitle">${this.cityName}, ${this.stateAbbr} ${this.zipcode}</h6>
-              <div class="d-flex justify-content-between">
-                <h6 class="card-subtitle">$${this.price}</h6>
-                <h6 class="card-subtitle">${this.squareFeet}</h6>
-              </div>
-              <p class="card-text">HOA: $${this.hoaFees}/mo</p>
-              <div class="d-flex justify-content-between">
-                <p class="card-text">${this.bedrooms}: bed${this.bedrooms > 1 ? "s" : ""}</p>
-                <p class="card-text">${this.bathrooms}: bath${this.bathrooms > 1 ? "s" : ""}</p>
-              </div>
-              <button class="btn btn-danger"><i class="mdi mdi-delete"></i></button>
-              <button class="btn btn-primary">Contact Seller</button>
-            </div>
-          </div>
-        </div> -->
-        <!-- Car end -->
-      </div>
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#form-modal">
-        Create
-      </button>
+      <div id="listings" class="row"></div>
 
       <!-- Modal -->
       <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
@@ -74,11 +50,9 @@
           </div>
         </div>
       </div>
-
-
-
     </div>
   </main>
+
   <footer class="bg-dark text-light">
     <div class="text-center no-select">
       <p><small>Made with 💖 by Codeworks</small></p>

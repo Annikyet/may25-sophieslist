@@ -14,7 +14,7 @@ class AppState extends EventEmitter {
   houses = [
     new House({
       price: 2995000,
-      imgUrl: 'https://thiscatdoesnotexist.com',
+      imgUrl: '../assets/img/home.svg',
       streetAddr: '123 Notareal St.',
       cityName: 'Boise',
       stateAbbr: 'ID',
